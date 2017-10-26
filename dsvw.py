@@ -89,11 +89,4 @@ class ThreadingServer(SocketServer.ThreadingMixIn, BaseHTTPServer.HTTPServer):
 if __name__ == "__main__":
     init()
     print "%s #v%s\n by: %s\n\n[i] running HTTP server at '%s:%d'..." % (NAME, VERSION, AUTHOR, LISTEN_ADDRESS, LISTEN_PORT)
-    try:
-        ThreadingServer((LISTEN_ADDRESS, LISTEN_PORT), ReqHandler).serve_forever()
-    except KeyboardInterrupt:
-        pass
-    except Exception, ex:
-        print "[x] exception occurred ('%s')" % ex
-    finally:
-        os._exit(0)
+    #Editet for demo 
